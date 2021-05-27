@@ -10,13 +10,12 @@ import Foundation
 class NetworkManager {
     
     func getPosts(completion: @escaping ([PostResponse]?) -> ()) {
-        let url = URL(string: "http://jsonplaceholder.typicode.com/posts")!
+        let url = URL(string: Environment.baseURL)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 if let posts = try? JSONDecoder().decode([PostResponse].self, from: data) {
-                    print(posts)
                     completion(posts)
                 } else {
                     print("Invalid Response")

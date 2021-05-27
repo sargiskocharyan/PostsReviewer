@@ -18,6 +18,11 @@
 		CD06C390265E813C00174C92 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C38F265E813C00174C92 /* ResponseModels.swift */; };
 		CD06C394265E817200174C92 /* RequestCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C393265E817200174C92 /* RequestCreator.swift */; };
 		CD06C3A0265E887800174C92 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C39F265E887800174C92 /* PostViewModel.swift */; };
+		CD06C3A4265E904000174C92 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C3A3265E904000174C92 /* PostsTableViewCell.swift */; };
+		CD06C3A9265E94DC00174C92 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C3A8265E94DC00174C92 /* Constants.swift */; };
+		CD06C3AE265E98B800174C92 /* PostCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C3AD265E98B800174C92 /* PostCoordinator.swift */; };
+		CD06C3B2265E9A3E00174C92 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C3B1265E9A3E00174C92 /* DetailViewController.swift */; };
+		CD06C3B6265E9A5D00174C92 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C3B5265E9A5D00174C92 /* DetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		CD06C38F265E813C00174C92 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		CD06C393265E817200174C92 /* RequestCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCreator.swift; sourceTree = "<group>"; };
 		CD06C39F265E887800174C92 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		CD06C3A3265E904000174C92 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		CD06C3A8265E94DC00174C92 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CD06C3AD265E98B800174C92 /* PostCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCoordinator.swift; sourceTree = "<group>"; };
+		CD06C3B1265E9A3E00174C92 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CD06C3B5265E9A5D00174C92 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +76,12 @@
 		CD06C362265E79E400174C92 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				CD06C3A7265E94CA00174C92 /* Common */,
+				CD06C3A2265E901E00174C92 /* Cells */,
 				CD06C38E265E812400174C92 /* Networking */,
 				CD06C39E265E886000174C92 /* ViewModels */,
-				CD06C385265E805C00174C92 /* ViewControllers */,
+				CD06C3B0265E9A1500174C92 /* Detail */,
+				CD06C385265E805C00174C92 /* Post */,
 				CD06C37F265E7F1600174C92 /* Base */,
 				CD06C37A265E7E7E00174C92 /* App  */,
 				CD06C365265E79E400174C92 /* SceneDelegate.swift */,
@@ -97,12 +110,13 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		CD06C385265E805C00174C92 /* ViewControllers */ = {
+		CD06C385265E805C00174C92 /* Post */ = {
 			isa = PBXGroup;
 			children = (
 				CD06C367265E79E400174C92 /* PostViewController.swift */,
+				CD06C3AD265E98B800174C92 /* PostCoordinator.swift */,
 			);
-			path = ViewControllers;
+			path = Post;
 			sourceTree = "<group>";
 		};
 		CD06C38E265E812400174C92 /* Networking */ = {
@@ -120,6 +134,31 @@
 				CD06C39F265E887800174C92 /* PostViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CD06C3A2265E901E00174C92 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CD06C3A3265E904000174C92 /* PostsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CD06C3A7265E94CA00174C92 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CD06C3A8265E94DC00174C92 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CD06C3B0265E9A1500174C92 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CD06C3B1265E9A3E00174C92 /* DetailViewController.swift */,
+				CD06C3B5265E9A5D00174C92 /* DetailCoordinator.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,12 +231,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD06C3B2265E9A3E00174C92 /* DetailViewController.swift in Sources */,
 				CD06C3A0265E887800174C92 /* PostViewModel.swift in Sources */,
+				CD06C3B6265E9A5D00174C92 /* DetailCoordinator.swift in Sources */,
 				CD06C394265E817200174C92 /* RequestCreator.swift in Sources */,
 				CD06C37C265E7E9E00174C92 /* AppCoordinator.swift in Sources */,
 				CD06C368265E79E400174C92 /* PostViewController.swift in Sources */,
 				CD06C381265E7F2500174C92 /* Coordinator.swift in Sources */,
+				CD06C3A9265E94DC00174C92 /* Constants.swift in Sources */,
+				CD06C3AE265E98B800174C92 /* PostCoordinator.swift in Sources */,
 				CD06C364265E79E400174C92 /* AppDelegate.swift in Sources */,
+				CD06C3A4265E904000174C92 /* PostsTableViewCell.swift in Sources */,
 				CD06C366265E79E400174C92 /* SceneDelegate.swift in Sources */,
 				CD06C390265E813C00174C92 /* ResponseModels.swift in Sources */,
 			);

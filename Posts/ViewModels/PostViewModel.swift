@@ -9,10 +9,16 @@ import Foundation
 
 class PostViewModel {
     let network = NetworkManager()
+    var posts: [PostResponse] = []
     
-    func getPosts(completion: @escaping ([PostResponse]?) -> ()) {
-        network.getPosts { (response) in
-            completion(response)
+    func getPosts(completion: @escaping (Bool) -> ()) {
+        network.getPosts { [self] (response) in
+            if response != nil {
+                posts = response!
+                completion(true)
+            }
+            completion(false)
         }
     }
+    
 }

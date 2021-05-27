@@ -18,8 +18,7 @@ class AppCoordinator: Coordinator {
         let navigationController = UINavigationController()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-        
-//        let startCoordinator = StartCoordinator(navigationController: navigationController)
-//        coordinate(to: startCoordinator)
+        let startCoordinator = PostCoordinator(navigationController: navigationController)
+        coordinate(to: startCoordinator)
     }
 }
