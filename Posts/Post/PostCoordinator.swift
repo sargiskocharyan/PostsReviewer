@@ -22,12 +22,13 @@ class PostCoordinator: Coordinator, PostFlow {
     func start() {
         let postViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: storyBoardIdentifier) as! PostViewController
         postViewController.coordinator = self
+        postViewController.viewModel = PostViewModel()
         navigationController.pushViewController(postViewController, animated: true)
     }
     
     // MARK: - Flow Methods
     func coordinateToDetailView() {
-        let vc = DetailCoordinator(navigationController: navigationController)
-        coordinate(to: vc)
+        let detailCoordinator = DetailCoordinator(navigationController: navigationController)
+        coordinate(to: detailCoordinator)
     }
 }

@@ -31,28 +31,31 @@ class LocalDataManager {
         }
     }
     
-    static func getUsers() -> [UserModel] {
+    static func getUser(by id: Int) -> UserModel? {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return []
+            return nil
         }
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.userEntityName)
         do {
-            let users = try managedContext.fetch(fetchRequest).map({ managedObject -> UserModel in
-                let id = managedObject.value(forKey: "id") as? Int
-                let name = managedObject.value(forKey: "name") as? String
-                let username = managedObject.value(forKey: "username") as? String
-                let email = managedObject.value(forKey: "email") as? String
-                let phone = managedObject.value(forKey: "phone") as? String
-                let website = managedObject.value(forKey: "website") as? String
-                let company = managedObject.value(forKey: "company") as? Company
-                let address = managedObject.value(forKey: "address") as? Address
+            let userManagedObject = try managedContext.fetch(fetchRequest).filter({ (managedObject) -> Bool in
+                return managedObject.value(forKey: "id") as? Int == id
+            }).first
+            if let userManagedObject = userManagedObject {
+                let id = userManagedObject.value(forKey: "id") as? Int
+                let name = userManagedObject.value(forKey: "name") as? String
+                let username = userManagedObject.value(forKey: "username") as? String
+                let email = userManagedObject.value(forKey: "email") as? String
+                let phone = userManagedObject.value(forKey: "phone") as? String
+                let website = userManagedObject.value(forKey: "website") as? String
+                let company = userManagedObject.value(forKey: "company") as? Company
+                let address = userManagedObject.value(forKey: "address") as? Address
                 return UserModel(id: id, name: name, username: username, email: email, address: address, phone: phone, website: website, company: company)
-            })
-            return users
+            }
+           return nil
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
-            return []
+            return nil
         }
     }
     

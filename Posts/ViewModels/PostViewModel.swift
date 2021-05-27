@@ -8,16 +8,26 @@
 import Foundation
 
 class PostViewModel {
-    let network = NetworkManager()
+    let networkManager = NetworkManager()
     var posts: [PostResponse] = []
     
-    func getPosts(completion: @escaping (Bool) -> ()) {
-        network.getPosts { [self] (response) in
-            if response != nil {
-                posts = response!
-                completion(true)
+    func getPosts(completion: @escaping (String?) -> ()) {
+        let postsFromLocalStorage = LocalDataManager.getPosts()
+        if postsFromLocalStorage.isEmpty {
+            networkManager.getPosts { [self] (response, error)  in
+                if let posts = response {
+                    self.posts = posts
+                    DispatchQueue.main.async {
+                        LocalDataManager.savePosts(posts: posts)
+                    }
+                    completion(nil)
+                    return
+                }
+                completion(error)
             }
-            completion(false)
+        } else {
+            self.posts = postsFromLocalStorage
+            completion(nil)
         }
     }
     

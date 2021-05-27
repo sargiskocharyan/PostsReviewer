@@ -10,7 +10,7 @@ import UIKit
 class PostViewController: UIViewController {
 
     //MARK: Properties
-    let viewModel = PostViewModel()
+    var viewModel: PostViewModel?
     var coordinator: PostFlow?
         
     //MARK: IBOutlets
@@ -25,8 +25,12 @@ class PostViewController: UIViewController {
     
     //MARK: Helper metthods
     func getPosts()  {
-        viewModel.getPosts { (isPostLoaded) in
-            if isPostLoaded {
+        viewModel?.getPosts { (error) in
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.showErrorAlert(title: "Error", errorMessage: error)
+                }
+            } else {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -39,19 +43,18 @@ class PostViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
     }
-    
 }
 
 //MARK: Extensions
 extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.posts.count
+        return viewModel?.posts.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.postCell, for: indexPath) as? PostsTableViewCell
-        cell?.configureCell(titleText: viewModel.posts[indexPath.row].title ?? "", bodyText: viewModel.posts[indexPath.row].body ?? "")
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.postCell, for: indexPath) as? PostsTableViewCell
+        cell?.configureCell(titleText: viewModel?.posts[indexPath.row].title ?? "", bodyText: viewModel?.posts[indexPath.row].body ?? "")
         return cell!
     }
     
@@ -62,7 +65,7 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension PostViewController {
-    struct Constant {
+    struct Constants {
         static let postCell = "postCell"
     }
 }

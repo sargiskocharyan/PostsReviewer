@@ -8,6 +8,16 @@
 import Foundation
 
 struct Environment {
-    static let baseURL = "http://jsonplaceholder.typicode.com/posts"
+    static let baseURL = "http://jsonplaceholder.typicode.com/"
+}
+
+struct Endpoints {
+    static let posts = Environment.baseURL + "posts"
+    static let users = Environment.baseURL + "users"
+}
+
+enum RequestMethods: String {
+    case get = "GET"
+    case post = "POST"
 }
 

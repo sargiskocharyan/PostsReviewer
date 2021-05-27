@@ -28,6 +28,8 @@
 		CD675F98265F6721009E74F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD675F91265F6721009E74F8 /* User.swift */; };
 		CD675F99265F6721009E74F8 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD675F93265F6721009E74F8 /* LocalDataManager.swift */; };
 		CD675F9A265F6721009E74F8 /* Posts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD675F94265F6721009E74F8 /* Posts.xcdatamodeld */; };
+		CD675F9E265F6F56009E74F8 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD675F9D265F6F56009E74F8 /* UIViewController-Extension.swift */; };
+		CD675FA2265FB83C009E74F8 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD675FA1265FB83C009E74F8 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		CD675F91265F6721009E74F8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CD675F93265F6721009E74F8 /* LocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		CD675F95265F6721009E74F8 /* Posts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Posts.xcdatamodel; sourceTree = "<group>"; };
+		CD675F9D265F6F56009E74F8 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
+		CD675FA1265FB83C009E74F8 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CD06C39F265E887800174C92 /* PostViewModel.swift */,
+				CD675FA1265FB83C009E74F8 /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 		CD06C3A7265E94CA00174C92 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CD675F9C265F6ED8009E74F8 /* Extensions */,
 				CD06C3A8265E94DC00174C92 /* Constants.swift */,
 			);
 			path = Common;
@@ -182,6 +188,14 @@
 				CD675F93265F6721009E74F8 /* LocalDataManager.swift */,
 			);
 			path = LocalDataManager;
+			sourceTree = "<group>";
+		};
+		CD675F9C265F6ED8009E74F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD675F9D265F6F56009E74F8 /* UIViewController-Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD06C3B2265E9A3E00174C92 /* DetailViewController.swift in Sources */,
+				CD675F9E265F6F56009E74F8 /* UIViewController-Extension.swift in Sources */,
 				CD06C3A0265E887800174C92 /* PostViewModel.swift in Sources */,
+				CD675FA2265FB83C009E74F8 /* DetailViewModel.swift in Sources */,
 				CD06C3B6265E9A5D00174C92 /* DetailCoordinator.swift in Sources */,
 				CD675F9A265F6721009E74F8 /* Posts.xcdatamodeld in Sources */,
 				CD06C394265E817200174C92 /* RequestCreator.swift in Sources */,

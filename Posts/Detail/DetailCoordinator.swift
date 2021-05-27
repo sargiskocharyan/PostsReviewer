@@ -19,10 +19,9 @@ class DetailCoordinator: Coordinator, DetailFlow {
     }
     
     func start() {
-//        let vc = DetailViewController()
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detail") as! DetailViewController
-//        postViewController.coordinator = self
-//        vc.coordinator = self
+        vc.viewModel = DetailViewModel()
+        vc.userId = 1
         navigationController.pushViewController(vc, animated: true)
     }
     
