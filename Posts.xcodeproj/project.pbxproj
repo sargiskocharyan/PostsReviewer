@@ -23,6 +23,11 @@
 		CD06C3AE265E98B800174C92 /* PostCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C3AD265E98B800174C92 /* PostCoordinator.swift */; };
 		CD06C3B2265E9A3E00174C92 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C3B1265E9A3E00174C92 /* DetailViewController.swift */; };
 		CD06C3B6265E9A5D00174C92 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06C3B5265E9A5D00174C92 /* DetailCoordinator.swift */; };
+		CD675F96265F6721009E74F8 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD675F8F265F6721009E74F8 /* Company.swift */; };
+		CD675F97265F6721009E74F8 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD675F90265F6721009E74F8 /* Address.swift */; };
+		CD675F98265F6721009E74F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD675F91265F6721009E74F8 /* User.swift */; };
+		CD675F99265F6721009E74F8 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD675F93265F6721009E74F8 /* LocalDataManager.swift */; };
+		CD675F9A265F6721009E74F8 /* Posts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD675F94265F6721009E74F8 /* Posts.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		CD06C3AD265E98B800174C92 /* PostCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCoordinator.swift; sourceTree = "<group>"; };
 		CD06C3B1265E9A3E00174C92 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD06C3B5265E9A5D00174C92 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		CD675F8F265F6721009E74F8 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		CD675F90265F6721009E74F8 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		CD675F91265F6721009E74F8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CD675F93265F6721009E74F8 /* LocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		CD675F95265F6721009E74F8 /* Posts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Posts.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,11 @@
 		CD06C362265E79E400174C92 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				CD675F90265F6721009E74F8 /* Address.swift */,
+				CD675F8F265F6721009E74F8 /* Company.swift */,
+				CD675F92265F6721009E74F8 /* LocalDataManager */,
+				CD675F94265F6721009E74F8 /* Posts.xcdatamodeld */,
+				CD675F91265F6721009E74F8 /* User.swift */,
 				CD06C3A7265E94CA00174C92 /* Common */,
 				CD06C3A2265E901E00174C92 /* Cells */,
 				CD06C38E265E812400174C92 /* Networking */,
@@ -161,6 +176,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		CD675F92265F6721009E74F8 /* LocalDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				CD675F93265F6721009E74F8 /* LocalDataManager.swift */,
+			);
+			path = LocalDataManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,14 +257,19 @@
 				CD06C3B2265E9A3E00174C92 /* DetailViewController.swift in Sources */,
 				CD06C3A0265E887800174C92 /* PostViewModel.swift in Sources */,
 				CD06C3B6265E9A5D00174C92 /* DetailCoordinator.swift in Sources */,
+				CD675F9A265F6721009E74F8 /* Posts.xcdatamodeld in Sources */,
 				CD06C394265E817200174C92 /* RequestCreator.swift in Sources */,
+				CD675F98265F6721009E74F8 /* User.swift in Sources */,
 				CD06C37C265E7E9E00174C92 /* AppCoordinator.swift in Sources */,
 				CD06C368265E79E400174C92 /* PostViewController.swift in Sources */,
 				CD06C381265E7F2500174C92 /* Coordinator.swift in Sources */,
 				CD06C3A9265E94DC00174C92 /* Constants.swift in Sources */,
 				CD06C3AE265E98B800174C92 /* PostCoordinator.swift in Sources */,
+				CD675F97265F6721009E74F8 /* Address.swift in Sources */,
 				CD06C364265E79E400174C92 /* AppDelegate.swift in Sources */,
 				CD06C3A4265E904000174C92 /* PostsTableViewCell.swift in Sources */,
+				CD675F99265F6721009E74F8 /* LocalDataManager.swift in Sources */,
+				CD675F96265F6721009E74F8 /* Company.swift in Sources */,
 				CD06C366265E79E400174C92 /* SceneDelegate.swift in Sources */,
 				CD06C390265E813C00174C92 /* ResponseModels.swift in Sources */,
 			);
@@ -445,6 +473,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD675F94265F6721009E74F8 /* Posts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD675F95265F6721009E74F8 /* Posts.xcdatamodel */,
+			);
+			currentVersion = CD675F95265F6721009E74F8 /* Posts.xcdatamodel */;
+			path = Posts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CD06C358265E79E400174C92 /* Project object */;
 }

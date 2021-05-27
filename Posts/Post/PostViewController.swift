@@ -51,7 +51,7 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constant.postCell, for: indexPath) as? PostsTableViewCell
-        cell?.configureCell(titleText: viewModel.posts[indexPath.row].title, bodyText: viewModel.posts[indexPath.row].body)
+        cell?.configureCell(titleText: viewModel.posts[indexPath.row].title ?? "", bodyText: viewModel.posts[indexPath.row].body ?? "")
         return cell!
     }
     
