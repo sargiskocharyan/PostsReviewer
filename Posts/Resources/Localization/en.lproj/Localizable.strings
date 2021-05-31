@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Posts
+
+  Created by Sargis Kocharyan on 5/27/21.
+  
+*/
+"name"                  = "Name: ";
+"username"              = "Username: ";
+"email"                 = "Email: ";
+"address"               = "Address: ";
+"street"                = "Street: ";
+"suite"                 = "Suite: ";
+"city"                  = "City: ";
+"episode"               = "Episode: ";
+"phone_number"          = "Phone number: ";
+"website"               = "Website: ";
+"company"               = "Company: ";
+"catch_phrase"          = "Catch phrase: ";
+"bs"                    = "BS: ";
+"posts"                 = "Posts";
+"zipcode"               = "Zipcode: ";
+"error"                 = "Error";
+"inavlid_response"      = "Invalid Response";
+"error_message"         = "Error message";
+"user_info"             = "User information";

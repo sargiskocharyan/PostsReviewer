@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Posts
 //
-//  Created by Employee1 on 5/26/21.
+//  Created by Sargis Kocharyan on 5/26/21.
 //
 
 import UIKit
