@@ -10,7 +10,7 @@ import Foundation
 class PostDetailViewModel {
     let networkService = NetworkService()
     
-     func getUserFromRemote(_ id: Int, _ completion: @escaping (UserModel?, String?) -> ()) {
+     func getUserFromRemote(_ id: Int, _ completion: @escaping (User?, String?) -> ()) {
         networkService.getUser(by: id) { (user, error) in
             if let user = user {
                 DispatchQueue.main.async {
@@ -21,7 +21,7 @@ class PostDetailViewModel {
         }
     }
     
-    func getUser(by id: Int, completion: @escaping (UserModel?, String?) -> ()) {
+    func getUser(by id: Int, completion: @escaping (User?, String?) -> ()) {
         let userFromLocalStorage = LocalDataManager.getUser(by: id)
         if userFromLocalStorage != nil {
             completion(userFromLocalStorage, nil)

@@ -73,7 +73,7 @@ class PostDetailViewController: UIViewController {
         return concate
     }
     
-    func fillFields(user: UserModel) {
+    func fillFields(user: User) {
         nameLabel.attributedText = generateAtributedString(str: "name", info: user.name ?? "")
         usernameLabel.attributedText = generateAtributedString(str: "username", info: user.username ?? "")
         emailLabel.attributedText = generateAtributedString(str: "email", info: user.email ?? "")

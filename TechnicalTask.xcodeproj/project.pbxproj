@@ -33,6 +33,7 @@
 		CD6E0CB4265FD50300F63A82 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD6E0CB6265FD50300F63A82 /* Localizable.strings */; };
 		CD6E0CBC265FD9B800F63A82 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E0CBB265FD9B800F63A82 /* String-Extension.swift */; };
 		CD6E0CC6265FF48A00F63A82 /* AppStoryboard-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E0CC5265FF48A00F63A82 /* AppStoryboard-Extension.swift */; };
+		CDD842F326667E7C005AED78 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD842F226667E7C005AED78 /* Post.swift */; };
 		CDDEC0D52665293E006D2736 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEC0D42665293E006D2736 /* EndPoints.swift */; };
 		CDDEC0E6266533EB006D2736 /* PostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEC0E5266533EB006D2736 /* PostsTests.swift */; };
 		CDDEC0F026653627006D2736 /* PostsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEC0EF26653627006D2736 /* PostsViewModelTests.swift */; };
@@ -81,6 +82,7 @@
 		CD6E0CB5265FD50300F63A82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD6E0CBB265FD9B800F63A82 /* String-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
 		CD6E0CC5265FF48A00F63A82 /* AppStoryboard-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStoryboard-Extension.swift"; sourceTree = "<group>"; };
+		CDD842F226667E7C005AED78 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CDDEC0D42665293E006D2736 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		CDDEC0E3266533EB006D2736 /* TechnicalTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechnicalTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDEC0E5266533EB006D2736 /* PostsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTests.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				CD675F8F265F6721009E74F8 /* Company.swift */,
 				CD675F91265F6721009E74F8 /* User.swift */,
 				CD675F90265F6721009E74F8 /* Address.swift */,
+				CDD842F226667E7C005AED78 /* Post.swift */,
 			);
 			path = DetailModels;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				CD06C3B2265E9A3E00174C92 /* PostDetailViewController.swift in Sources */,
 				CD675F9E265F6F56009E74F8 /* UIViewController-Extension.swift in Sources */,
 				CD06C3A0265E887800174C92 /* PostsViewModel.swift in Sources */,
+				CDD842F326667E7C005AED78 /* Post.swift in Sources */,
 				CD675FA2265FB83C009E74F8 /* PostDetailViewModel.swift in Sources */,
 				CD06C3B6265E9A5D00174C92 /* PostDetailCoordinator.swift in Sources */,
 				CD6E0CBC265FD9B800F63A82 /* String-Extension.swift in Sources */,

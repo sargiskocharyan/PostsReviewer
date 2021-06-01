@@ -2,7 +2,7 @@
 //  PostsViewModelTests.swift
 //  PostsTests
 //
-//  Created by Employee1 on 5/31/21.
+//  Created by Sargis Kocharyan on 5/31/21.
 //
 
 import XCTest
@@ -28,7 +28,7 @@ class PostsViewModelTests: XCTestCase {
         let network = NetworkService(session: urlSession)
         
         // Set mock data
-        let samplePostData = PostModel(userId: 1, id: 1, title: "test post title", body: "test body")
+        let samplePostData = Post(userId: 1, id: 1, title: "test post title", body: "test body")
         let samplDataArray = [samplePostData]
         let mockData = try JSONEncoder().encode(samplDataArray)
         

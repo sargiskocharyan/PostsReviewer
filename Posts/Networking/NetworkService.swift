@@ -17,13 +17,13 @@ class NetworkService {
         self.session = session
     }
     
-    func getPosts(completion: @escaping ([PostModel]?, String?) -> ()) {
+    func getPosts(completion: @escaping ([Post]?, String?) -> ()) {
         let url = URL(string: Endpoints.posts)!
         var request = URLRequest(url: url)
         request.httpMethod = RequestMethods.get.rawValue
         let task = session.dataTask(with: url) { data, response, error in
             if let data = data {
-                if let posts = try? JSONDecoder().decode([PostModel].self, from: data) {
+                if let posts = try? JSONDecoder().decode([Post].self, from: data) {
                     completion(posts, nil)
                 } else {
                     completion(nil, "inavlid_response")
@@ -35,13 +35,13 @@ class NetworkService {
         task.resume()
     }
     
-    func getUser(by id: Int, completion: @escaping (UserModel?, String?) -> ()) {
+    func getUser(by id: Int, completion: @escaping (User?, String?) -> ()) {
         let url = URL(string: Endpoints.users + "?id=\(id)")!
         var request = URLRequest(url: url)
         request.httpMethod = RequestMethods.get.rawValue
         let task = session.dataTask(with: url) { data, response, error in
             if let data = data {
-                if let user = try? JSONDecoder().decode([UserModel].self, from: data).first {
+                if let user = try? JSONDecoder().decode([User].self, from: data).first {
                     completion(user, nil)
                 } else {
                     completion(nil, "inavlid_response")

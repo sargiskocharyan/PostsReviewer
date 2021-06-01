@@ -8,8 +8,8 @@
 import Foundation
 
 struct PostModel: Codable {
-    var userId: Int?
-    var id: Int?
-    var title: String?
-    var body: String?
+    var userId: Int16
+    var id: Int16
+    var title: String
+    var body: String
 }

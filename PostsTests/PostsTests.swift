@@ -2,7 +2,7 @@
 //  PostsTests.swift
 //  PostsTests
 //
-//  Created by Employee1 on 5/31/21.
+//  Created by Sargis Kocharyan on 5/31/21.
 //
 
 import XCTest

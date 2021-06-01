@@ -9,7 +9,7 @@ import Foundation
 
 class PostsViewModel {
     let networkService = NetworkService()
-    var posts: [PostModel] = []
+    var posts: [Post] = []
     
     func getPosts(completion: @escaping (String?) -> ()) {
         let postsFromLocalStorage = LocalDataManager.getPosts()

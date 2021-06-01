@@ -61,7 +61,7 @@ extension PostsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let id = viewModel?.posts[indexPath.row].userId {
-            coordinator?.coordinateToDetailView(userId: id, body: viewModel?.posts[indexPath.row].body ?? "", title: viewModel?.posts[indexPath.row].title ?? "")
+            coordinator?.coordinateToDetailView(userId: Int(id), body: viewModel?.posts[indexPath.row].body ?? "", title: viewModel?.posts[indexPath.row].title ?? "")
         }
     }
 }

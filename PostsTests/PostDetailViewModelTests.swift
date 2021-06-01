@@ -2,7 +2,7 @@
 //  PostDetailViewModelTests.swift
 //  PostsTests
 //
-//  Created by Employee1 on 5/31/21.
+//  Created by Sargis Kocharyan on 5/31/21.
 //
 
 import XCTest
@@ -28,7 +28,7 @@ class PostDetailViewModelTests: XCTestCase {
         let network = NetworkService(session: urlSession)
         
         // Set mock data
-        let samplePostData = UserModel(id: 1, name: "name test", username: "username test", email: "email test", address: Address(street: "street test", suite: "suite test", city: "city test", zipcode: "zipcode test"), phone: "phone test", website: "website test", company: Company(name: "company name test", catchPhrase: "catchPhrase test", bs: "bs test")) // PostModel(userId: 1, id: 1, title: "test post title", body: "test body")
+        let samplePostData = User(id: 1, name: "name test", username: "username test", email: "email test", address: Address(street: "street test", suite: "suite test", city: "city test", zipcode: "zipcode test"), phone: "phone test", website: "website test", company: Company(name: "company name test", catchPhrase: "catchPhrase test", bs: "bs test")) // PostModel(userId: 1, id: 1, title: "test post title", body: "test body")
         let samplDataArray = [samplePostData]
         let mockData = try JSONEncoder().encode(samplDataArray)
         
