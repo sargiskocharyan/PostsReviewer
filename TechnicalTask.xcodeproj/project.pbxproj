@@ -141,12 +141,12 @@
 				CD06C37F265E7F1600174C92 /* Coordinator */,
 				CD87B979265FF77200388874 /* Resources */,
 				CDDEC0DA26653062006D2736 /* CustomViews */,
-				CD06C37A265E7E7E00174C92 /* App  */,
+				CD06C37A265E7E7E00174C92 /* App */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
 		};
-		CD06C37A265E7E7E00174C92 /* App  */ = {
+		CD06C37A265E7E7E00174C92 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				CD06C363265E79E400174C92 /* AppDelegate.swift */,
@@ -157,7 +157,7 @@
 				CD06C37B265E7E9E00174C92 /* AppCoordinator.swift */,
 				CD06C3A8265E94DC00174C92 /* Constants.swift */,
 			);
-			path = "App ";
+			path = App;
 			sourceTree = "<group>";
 		};
 		CD06C37F265E7F1600174C92 /* Coordinator */ = {

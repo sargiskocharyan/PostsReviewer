@@ -15,10 +15,10 @@ class LocalDataManager {
             return []
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.postEntityName)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Keys.postEntityName)
         do {
             let posts = try managedContext.fetch(fetchRequest).compactMap({ managedObject -> Post? in
-                let post = managedObject.value(forKey: Constants.post) as? Post
+                let post = managedObject.value(forKey: Keys.post) as? Post
                 return post
             })
             return posts
@@ -33,11 +33,11 @@ class LocalDataManager {
             return
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: Constants.postEntityName, in: managedContext)!
+        let entity = NSEntityDescription.entity(forEntityName: Keys.postEntityName, in: managedContext)!
         
         for post in posts {
             let newPost = NSManagedObject(entity: entity, insertInto: managedContext)
-            newPost.setValue(post, forKey: Constants.post)
+            newPost.setValue(post, forKey: Keys.post)
         }
         do {
             try managedContext.save()
@@ -52,10 +52,10 @@ class LocalDataManager {
             return
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: Constants.userEntityName, in: managedContext)!
+        let entity = NSEntityDescription.entity(forEntityName: Keys.userEntityName, in: managedContext)!
         
         let newUser = NSManagedObject(entity: entity, insertInto: managedContext)
-        newUser.setValue(user, forKey: Constants.user)
+        newUser.setValue(user, forKey: Keys.user)
         do {
             try managedContext.save()
         } catch {
@@ -68,11 +68,11 @@ class LocalDataManager {
             return nil
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.userEntityName)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Keys.userEntityName)
         do {
             let user = try managedContext.fetch(fetchRequest).compactMap({ (managedObject) -> User? in
-                if (managedObject.value(forKey: Constants.user) as? User)?.id == id {
-                    return managedObject.value(forKey: Constants.user) as? User
+                if (managedObject.value(forKey: Keys.user) as? User)?.id == id {
+                    return managedObject.value(forKey: Keys.user) as? User
                 }
                 return nil
             }).first
@@ -86,7 +86,7 @@ class LocalDataManager {
 }
 
 extension LocalDataManager {
-    struct Constants {
+    struct Keys {
         static let postEntityName = "Posts"
         static let modelName = "Posts"
         static let userEntityName = "Users"
