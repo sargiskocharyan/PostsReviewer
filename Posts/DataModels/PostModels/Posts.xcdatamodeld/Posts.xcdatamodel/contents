@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="PostModel" representedClassName="PostModel" syncable="YES">
-        <attribute name="body" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
-        <attribute name="userId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-    </entity>
     <entity name="Posts" representedClassName="Posts" syncable="YES" codeGenerationType="class">
-        <attribute name="post" optional="YES" attributeType="Transformable"/>
+        <attribute name="post" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransforme"/>
     </entity>
     <entity name="Users" representedClassName="Users" syncable="YES" codeGenerationType="class">
-        <attribute name="user" optional="YES" attributeType="Transformable"/>
+        <attribute name="user" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransforme"/>
     </entity>
     <elements>
-        <element name="PostModel" positionX="-54" positionY="-9" width="128" height="103"/>
         <element name="Posts" positionX="-45" positionY="63" width="128" height="58"/>
         <element name="Users" positionX="-36" positionY="72" width="128" height="58"/>
     </elements>
